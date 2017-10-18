@@ -1,0 +1,24 @@
+{
+  "name": "node-whois-promise",
+  "version": "1.0.0",
+  "description": "Whois client with promise supported",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joyqi/node-whois-promise.git"
+  },
+  "keywords": [
+    "whois",
+    "promise",
+    "node"
+  ],
+  "author": "joyqi",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/joyqi/node-whois-promise/issues"
+  },
+  "homepage": "https://github.com/joyqi/node-whois-promise#readme"
+}
