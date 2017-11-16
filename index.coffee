@@ -12,6 +12,7 @@ module.exports = (domain, server, options = {}) ->
 
         if options.timeout isnt undefined
             client.setTimeout options.timeout, (err) ->
+                client.destroy()
                 reject 'Socket timeout.'
 
         client.on 'error', (err) ->
@@ -20,6 +21,6 @@ module.exports = (domain, server, options = {}) ->
         client.on 'data', (data) ->
             buf += data.toString()
 
-        client.on 'end', ->
+        client.on 'close', ->
             resolve buf
 

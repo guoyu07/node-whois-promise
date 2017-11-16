@@ -15,6 +15,7 @@
       });
       if (options.timeout !== void 0) {
         client.setTimeout(options.timeout, function(err) {
+          client.destroy();
           return reject('Socket timeout.');
         });
       }
@@ -24,7 +25,7 @@
       client.on('data', function(data) {
         return buf += data.toString();
       });
-      return client.on('end', function() {
+      return client.on('close', function() {
         return resolve(buf);
       });
     });
